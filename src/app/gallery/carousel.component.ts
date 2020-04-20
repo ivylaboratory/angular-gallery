@@ -3,8 +3,8 @@ import {ChangeDetectorRef, Component, ElementRef, EventEmitter, HostBinding, Hos
 import {Images} from './interfaces';
 import {Touches} from './touches';
 import {Carousel} from './carousel';
-import {OverlayProperties} from '../overlay/interfaces';
-import {EventService as OverlayEventService} from '../overlay/event.service'; 
+import {OverlayProperties} from './overlay/interfaces';
+import {EventService as OverlayEventService} from './overlay/event.service'; 
 
 
 @Component({

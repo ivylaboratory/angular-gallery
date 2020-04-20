@@ -2,9 +2,9 @@ import {Injectable, Injector, ComponentFactoryResolver, EmbeddedViewRef, Applica
 
 import {CarouselComponent} from './carousel.component';
 import {GalleryProperties} from './interfaces';
-import {Overlay} from '../overlay/overlay.service';
-import {OverlayProperties} from '../overlay/interfaces'; 
-import {EventService as OverlayEventService} from '../overlay/event.service'; 
+import {Overlay} from './overlay/overlay.service';
+import {OverlayProperties} from './overlay/interfaces'; 
+import {EventService as OverlayEventService} from './overlay/event.service'; 
 import {defaultProperties} from './default-properties';
 
 @Injectable()
