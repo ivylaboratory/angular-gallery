@@ -1,0 +1,26 @@
+$overlay-z-index: 1000
+$overlay-backdrop-background: #000
+
+\:host
+  //pointer-events: none
+  //top: 0
+  //left: 0
+  //height: 100%
+  //width: 100%
+  //position: absolute
+  //position: fixed
+  //z-index: 10000
+  position: absolute
+  top: 0
+  left: 0
+  .overlay-backdrop
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: $overlay-backdrop-background
+    opacity: 0
+    //transition: opacity 300ms cubic-bezier(0.465, 0.183, 0.153, 0.946)
+    z-index: $overlay-z-index
+    pointer-events: auto
