@@ -10,15 +10,15 @@ Live demo can be found on [home page](http://ivylab.space/gallery).
 
 Install the npm package.
 ```
-  npm i angular-gallery
+npm i angular-gallery
 ```
 Import module:
 ```ts
-  import {IvyGalleryModule} from 'angular-gallery';
+import {IvyGalleryModule} from 'angular-gallery';
 
-  @NgModule({
-      imports: [IvyGalleryModule]
-  })
+@NgModule({
+    imports: [IvyGalleryModule]
+})
 ```
 
 ## Usage
