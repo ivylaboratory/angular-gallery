@@ -24,16 +24,24 @@ Import module:
 ## Usage
 Build your list of thumbnails and open them in full size using the gallery, passing the index of the image as an argument.
 
-```html
-<carousel
-    [images]="images">
-</carousel>
-```
 ```ts
-images = [
-    {path: 'PATH_TO_IMAGE'},
-    ...
-]
+import {Gallery} from 'angular-gallery';
+
+constructor(private gallery: Gallery) {}
+
+showGallery(index: number) {
+    let prop = {
+        images: [
+            {path: 'path_to_image_full_image'},
+            ...
+        ],
+        index
+    };
+    this.gallery.load(prop);
+}
+```
+```html
+<img src="path_to_thumbnail" (click)="showGallery(index)">
 ```
 
 ## Properties
