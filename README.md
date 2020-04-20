@@ -1,27 +1,66 @@
-# GalleryApp
+# Gallery for Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.
+<img src="https://badgen.net/bundlephobia/min/angular-gallery" />
 
-## Development server
+Responsive gallery for Angular with touch screen support.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Live demo can be found on [home page](http://ivylab.space/gallery).
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Install the npm package.
+```
+  npm i angular-gallery
+```
+Import module:
+```ts
+  import {IvyGalleryModule} from 'angular-gallery';
 
-## Build
+  @NgModule({
+      imports: [IvyGalleryModule]
+  })
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Usage
+Build your list of thumbnails and open them in full size using the gallery, passing the index of the image as an argument.
 
-## Running unit tests
+```html
+<carousel
+    [images]="images">
+</carousel>
+```
+```ts
+images = [
+    {path: 'PATH_TO_IMAGE'},
+    ...
+]
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Properties
 
-## Running end-to-end tests
+```ts
+index: number
+// The index of the image in the array that will be displayed when the gallery is opened.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+minSwipeDistance: number = 50
+// Minimum distance for swipe.
 
-## Further help
+transitionDuration: number = 400
+// Animation duration.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+transitionTimingFunction: 'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear' = 'ease'
+// Smooth animation function.
+
+counter: boolean = false
+// Show counter.
+
+counterSeparator: string = " / "
+// Counter separator.
+
+arrows: boolean = true
+// Arrows for image navigation.
+```
+
+## Browser support
+
+IvyPinch supports the most recent two versions of all major browsers: Chrome (including Android 4.4-10), Firefox, Safari (including iOS 9-13), and Edge.
