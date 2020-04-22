@@ -25,7 +25,6 @@ export class Overlay {
     }
 
     appendComponentToBody(properties: any, component: any = OverlayContainerComponent):void {
-        //if (this.componentRefs[properties.id]){
         if (this.componentRefs[0]){
             return;
         }
@@ -34,7 +33,6 @@ export class Overlay {
             .resolveComponentFactory(component)
             .create(this.injector);
 
-        //this.componentRefs[properties.id] = componentRef;
         this.componentRefs[0] = componentRef;
 
         (<ContainerProperties>componentRef.instance).properties = properties;
@@ -94,7 +92,6 @@ export class Overlay {
     }
 
     handleCloseEvent(){
-        //const id = 'popover'; // Note: pass id in event
         this.appRef.detachView(this.componentRefs[0].hostView);
         this.componentRefs[0].destroy();
         delete this.componentRefs[0];

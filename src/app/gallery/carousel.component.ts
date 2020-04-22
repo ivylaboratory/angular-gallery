@@ -107,6 +107,7 @@ export class CarouselComponent implements OnDestroy {
         this._images = this._properties.metadata.images;
         this._cellWidth = this._properties.metadata.width;
         this.height = this._properties.metadata.height;
+        this.width = this._properties.metadata.width;
         this.objectFit = this._properties.metadata.objectFit;
         this.margin = this._properties.metadata.margin;
         this.transitionDuration = this._properties.metadata.transitionDuration;

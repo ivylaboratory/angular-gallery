@@ -27,9 +27,9 @@ export class Gallery {
             metadata: {
                 images: properties.images,
                 index: properties.index,
-                width: document.body.clientWidth,
+                width: window.innerWidth,
                 height: window.innerHeight,
-                objectFit: 'none',
+                objectFit: 'initial',
                 margin: 0,
                 transitionDuration: properties.transitionDuration,
                 overflowCellsLimit: 1,
