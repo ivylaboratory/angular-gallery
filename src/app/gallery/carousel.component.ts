@@ -286,10 +286,12 @@ export class CarouselComponent implements OnDestroy {
         }
     }
 
+    @HostListener("window:keydown.arrowright", ["$event"])
     next() {
         this.carousel.next(1);
     }
 
+    @HostListener("window:keydown.arrowleft", ["$event"])
     prev() {
         this.carousel.prev(1);
     }
@@ -306,6 +308,7 @@ export class CarouselComponent implements OnDestroy {
         return this.carousel.isPrevArrowDisabled();
     }
 
+    @HostListener("window:keydown.esc", ["$event"])
     close() {
         this.overlayEventService.emitChangeEvent({
             type: 'Hide'
