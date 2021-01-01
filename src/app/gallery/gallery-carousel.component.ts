@@ -8,13 +8,13 @@ import {EventService as OverlayEventService} from './overlay/event.service';
 
 
 @Component({
-	selector: 'carousel, [carousel]',
-    exportAs: 'carousel',
-	templateUrl: './carousel.component.html',
-    styleUrls: ['./carousel.component.sass']
+	selector: 'gallery-carousel, [gallery-carousel]',
+    exportAs: 'gallery-carousel',
+	templateUrl: './gallery-carousel.component.html',
+    styleUrls: ['./gallery-carousel.component.sass']
 })
 
-export class CarouselComponent implements OnDestroy {
+export class GalleryCarouselComponent implements OnDestroy {
     _id: string;
     _images: Images;
     touches: any;

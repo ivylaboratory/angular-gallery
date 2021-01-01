@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CarouselComponent } from './carousel.component';
+import { GalleryCarouselComponent } from './gallery-carousel.component';
 import { Gallery } from './gallery.service';
 import { OverlayModule } from './overlay/overlay.module';
 
 @NgModule({
     declarations: [
-        CarouselComponent
+        GalleryCarouselComponent
     ],
     imports: [
         CommonModule,
         OverlayModule
     ],
     exports: [
-        CarouselComponent
+      GalleryCarouselComponent
     ],
     providers: [
         Gallery
@@ -22,7 +22,7 @@ import { OverlayModule } from './overlay/overlay.module';
         
     ],
     entryComponents: [
-        CarouselComponent
+      GalleryCarouselComponent
     ]
 })
 export class IvyGalleryModule { }
