@@ -1,6 +1,6 @@
 import {Injectable, Injector, ComponentFactoryResolver, EmbeddedViewRef, ApplicationRef, ComponentRef, EventEmitter} from '@angular/core';
 
-import {CarouselComponent} from './carousel.component';
+import { GalleryCarouselComponent } from './gallery-carousel.component';
 import {GalleryProperties} from './interfaces';
 import {Overlay} from './overlay/overlay.service';
 import {OverlayProperties} from './overlay/interfaces'; 
@@ -20,7 +20,7 @@ export class Gallery {
 
         this.overlay.load({
             id: 'gallery',
-            mainComponent: CarouselComponent,
+            mainComponent: GalleryCarouselComponent,
             width: document.body.clientWidth+'px',
             overlayBackdrop: true,
             position: 'fixed',

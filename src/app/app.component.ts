@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { Gallery } from './gallery/gallery.service';
-import { CarouselComponent } from './gallery/carousel.component';
+import { GalleryCarouselComponent } from './gallery/gallery-carousel.component';
 
 @Component({
 	selector: 'app-root',
@@ -14,7 +14,7 @@ export class AppComponent {
 
     showGallery(index: number = 0) {
         let prop: any = {};
-        prop.component = CarouselComponent;
+        prop.component = GalleryCarouselComponent;
         prop.images = [
             {path: '/assets/photo-1547691889-841a6f1c5ca6.jpg'},
             {path: '/assets/photo-1548625149-9129dad5eef7.jpg'},
