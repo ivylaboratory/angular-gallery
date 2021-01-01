@@ -1,6 +1,6 @@
 import {Injectable, Injector, ComponentFactoryResolver, EmbeddedViewRef, ApplicationRef, ComponentRef, EventEmitter} from '@angular/core';
 
-import { GalleryCarouselComponent } from './gallery-carousel.component';
+import {GalleryCarouselComponent} from './gallery-carousel.component';
 import {GalleryProperties} from './interfaces';
 import {Overlay} from './overlay/overlay.service';
 import {OverlayProperties} from './overlay/interfaces'; 
